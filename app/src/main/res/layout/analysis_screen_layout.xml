@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent" android:background="#333333"
+                                                   android:id="@+id/analysis_screen_layout">
+
+    <TextView
+            android:text="Мы проанализировали полученные данные и сравнили их со средними показателями из вашей группы. Вы можете продолжить если вы не хотите выбирать индивидуальную программу."
+            android:layout_width="348dp"
+            android:layout_height="200dp" android:id="@+id/analysis_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.085"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#FFFFFF" android:textSize="20sp" app:layout_constraintHorizontal_bias="0.483"/>
+    <Button
+            android:text="ПРОДОЛЖИТЬ"
+            android:layout_width="291dp"
+            android:layout_height="65dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.721" android:id="@+id/button_continue"
+            android:textColorLink="#C30D0D" android:textColorHint="#E60808" android:textColorHighlight="#CA0B0B"
+            android:textColor="#FFFFFF" app:rippleColor="#E80C0C" android:shadowColor="#EA0808"
+            app:strokeColor="#DA0101" android:backgroundTint="#EF7217"/>
+    <Button
+            android:text="СОСТАВИТЬ ИНДИВИДУАЛЬНУЮ ПРОГРАММУ"
+            android:layout_width="291dp"
+            android:layout_height="65dp" android:id="@+id/button_create_program"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.854" android:backgroundTint="#EF7217" android:textColor="#FFFFFF"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

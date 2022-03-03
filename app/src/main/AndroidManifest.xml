@@ -19,23 +19,23 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ScreenCollect"
+                android:name=".DataCollectionActivity"
                 android:exported="true">
         </activity>
-        <activity android:name=".StandbyScreen"
+        <activity android:name=".WaitingActivity"
                   android:exported="true" tools:ignore="Instantiatable">
         </activity>
-        <activity android:name=".AnalysisScreen"
+        <activity android:name=".AnalysisActivity"
                   android:exported="true" tools:ignore="Instantiatable">
         </activity>
-        <activity android:name=".ScreenSettings"
+        <activity android:name=".SettingsActivity"
                   android:exported="true" tools:ignore="Instantiatable">
         </activity>
-        <activity android:name=".MainMenu"
+        <activity android:name=".MenuActivity"
                   android:exported="true" tools:ignore="Instantiatable">
 
         </activity>
-        <activity android:name=".UserScreen"
+        <activity android:name=".UserDataActivity"
                   android:exported="true"/>
 
 

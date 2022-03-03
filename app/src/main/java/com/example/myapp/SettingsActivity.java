@@ -2,15 +2,12 @@ package com.example.myapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import androidx.annotation.Nullable;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ScreenSettings extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
 
     private View screen_settings;
     private TextView txt_settings_soon;
@@ -32,10 +29,8 @@ public class ScreenSettings extends AppCompatActivity {
         ib_to_main_menu2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Handler().postDelayed(() ->{
-                    screen_settings.setAlpha(0);
-                    startActivity(new Intent(ScreenSettings.this, MainMenu.class));
-                }, 1000);
+                screen_settings.setAlpha(0);
+                startActivity(new Intent(SettingsActivity.this, MenuActivity.class));
             }
         });
     }

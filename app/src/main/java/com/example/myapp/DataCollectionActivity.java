@@ -9,7 +9,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DataCollectionActivity extends AppCompatActivity {
-    public static UserData user;
+    public static UserData user = new UserData();
     private View screen_collect;
     private Button buttonConfirm;
     private EditText editName, editAge, editHeight, editWeight;
@@ -29,18 +29,14 @@ public class DataCollectionActivity extends AppCompatActivity {
     @Override
     protected void onResume(){
         super.onResume();
-        buttonConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                user = new UserData();
-                user.name = editName.getText().toString();
-                user.age = Integer.decode(editAge.getText().toString());
-                user.height = Integer.decode(editHeight.getText().toString());
-                user.weight = Integer.decode(editWeight.getText().toString());
+        buttonConfirm.setOnClickListener(view -> {
+            user.name = editName.getText().toString();
+            user.age = Integer.parseInt(editAge.getText().toString());
+            user.height = Integer.parseInt(editHeight.getText().toString());
+            user.weight = Integer.parseInt(editWeight.getText().toString());
 
-                screen_collect.setAlpha(0);
-                startActivity(new Intent(DataCollectionActivity.this, WaitingActivity.class));
-            }
+            screen_collect.setAlpha(0);
+            startActivity(new Intent(DataCollectionActivity.this, WaitingActivity.class));
         });
     }
 }
